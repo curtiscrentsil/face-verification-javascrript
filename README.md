@@ -10,8 +10,8 @@ a system that can let you signup and login with face verification with javascrip
 
 # How to use project
 # - signup:
-fill the form and click on take biometrics
-snap the to pictures and click on submit
+- fill the form and click on take biometrics
+- snap the to pictures and click on submit
 
 # - login:
 - wait for `logged` to show under the purple div
