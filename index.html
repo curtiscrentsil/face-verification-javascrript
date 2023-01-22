@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"></script>
+
+    <title>face rec</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      canvas {
+        position: absolute;
+      }
+      .biometrics {
+        display: none;
+        background-color: antiquewhite;
+        width: 50%;
+        height: 50vh;
+        align-items: center;
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
+    .cards {
+        width: 40%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: yellow;
+      }
+      video {
+        border: 1px solid blue;
+      }
+      canvas {
+        /* border: 1px solid red; */
+        width:200px;
+        height: 150px;
+        position: absolute;
+        margin-top: -107px;
+      }
+      button {
+        cursor: pointer;
+      }
+      .register{
+        background-color: blueviolet;
+        width: 30%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      input{
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="biometrics" id="biometrics">
+      <div class="cards">
+        <video id="webcam" autoplay playsinlne width="200" height="200"></video>
+        <button id="scan1">scan face</button>
+        <button id="ko">snap</button>
+        <canvas id="webcanvas"></canvas>
+      </div>
+      <div class="cards">
+        <video
+          id="webcam2"
+          autoplay
+          playsinlne
+          width="200"
+          height="200"></video>
+        <canvas id="webcanvas2" width="200" height="200"></canvas>
+        <button id="scan2">scan face</button>
+        <button id="ko2">snap</button>
+      </div>
+    </div>
+
+    <div class="register">
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="username" placeholder="username">
+        <input type="text" id="password" placeholder="password">
+        <input type="text" id="confrim" placeholder="confrim">
+        <button id="bio">Take Biometrics</button>
+
+        <button id="submit">Submit</button>
+    </div>
+
+   <script src="./register.js"></script> 
+  </body>
+</html>
