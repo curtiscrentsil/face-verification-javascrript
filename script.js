@@ -75,6 +75,7 @@ fetch("getFolders.php", {
       const container = document.createElement("div");
       container.style.position = "relative";
       document.body.append(container);
+      console.log(data);
       const labeledFaceDescriptors = await loadLabeledImages(data);
       const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
       let canvas;
@@ -152,7 +153,7 @@ function loadLabeledImages(data) {
       const descriptions = [];
       for (let i = 1; i <= 2; i++) {
         const img = await faceapi.fetchImage(
-          `http://localhost:81/face-recognition/labeled_images/${label}/${i}.png`,
+          `${location.href}labeled_images/${label}/${i}.png`,
           { mode: "no-cors" }
         );
         // const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/WebDevSimplified/Face-Recognition-JavaScript/master/labeled_images/${label}/${i}.jpg`)
@@ -167,3 +168,5 @@ function loadLabeledImages(data) {
     })
   );
 }
+
+
