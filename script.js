@@ -153,7 +153,7 @@ function loadLabeledImages(data) {
       const descriptions = [];
       for (let i = 1; i <= 2; i++) {
         const img = await faceapi.fetchImage(
-          `${location.href}labeled_images/${label}/${i}.png`,
+          `${location.origin}/${location.pathname.split("/")[1]}/labeled_images/${label}/${i}.png`,
           { mode: "no-cors" }
         );
         // const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/WebDevSimplified/Face-Recognition-JavaScript/master/labeled_images/${label}/${i}.jpg`)
